@@ -9,3 +9,8 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+- I created separate functions for hashing and stringifying input values. This makes the code more modular and easier to test.
+- I refactored the code that generates the candidate key into a separate generateCandidate function. This makes it easier to understand what the function is doing.
+- I refactored the code that truncates the key into a separate truncate function. This makes it easier to understand what the function is doing.
+- I made some variable names more descriptive. This helps make the code more readable.
+- I used the module.exports syntax to make the deterministicPartitionKey function the default export of the module.
