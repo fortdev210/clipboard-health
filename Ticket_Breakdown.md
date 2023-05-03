@@ -16,3 +16,42 @@ Based on the information given, break this ticket down into 2-5 individual ticke
 You will be graded on the level of detail in each ticket, the clarity of the execution plan within and between tickets, and the intelligibility of your language. You don't need to be a native English speaker, but please proof-read your work.
 
 ## Your Breakdown Here
+### Ticket 1: Create a custom id field in the Agent table
+
+Acceptance criteria:
+- A custom id field is added to the Agent table.
+- The custom id field is editable by Facilities.
+- Custom ids are unique per Facility.
+- Custom ids are displayed in reports instead of the internal database ids.
+
+Implementation details:
+- Add a new column to the Agent table for custom ids.
+- Update the user interface to allow Facilities to edit the custom id field.
+- Add validation to ensure that custom ids are unique per Facility.
+
+### Ticket 2: Modify the getShiftsByFacility function to include custom ids
+
+Acceptance criteria:
+- The getShiftsByFacility function now returns the custom id for each Agent assigned to a Shift in addition to the internal database id.
+
+Implementation details:
+- Modify the query used in the getShiftsByFacility function to include the custom id field from the Agent table.
+- Update the function to return the custom id instead of the internal database id when generating reports.
+
+### Ticket 3: Modify the generateReport function to include custom ids
+
+Acceptance criteria:
+- The generateReport function now uses the custom id instead of the internal database id when generating reports.
+
+Implementation details:
+- Update the report generation code to use the custom id field from the Agent table instead of the internal database id.
+
+### Ticket 4: Add validation to ensure that custom ids are unique per Facility
+
+Acceptance criteria:
+- When a Facility tries to save a custom id for an Agent, the system should check if the custom id is unique for that Facility.
+- An error message should be displayed if the custom id is not unique.
+
+Implementation details:
+- Modify the user interface to check for duplicate custom ids before saving.
+- Display an error message if the custom id is not unique.
